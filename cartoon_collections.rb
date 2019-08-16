@@ -18,15 +18,22 @@ def long_planeteer_calls(array)
  end
 end
 
+#def find_the_cheese(array)
+  # array.include?("cheddar")
+    #return "cheddar"
+    #elsif array.include?("gouda")
+    #return"gouda"
+    #elsif array.include?("camembert")
+    #return"camembert"
+  #else 
+  #return nil
+  #end
+  #cheese_types = ["cheddar", "gouda", "camembert"]
+#end
+
 def find_the_cheese(array)
-  if array.include?("cheddar")
-    return "cheddar"
-    elsif array.include?("gouda")
-    return"gouda"
-    elsif array.include?("camembert")
-    return"camembert"
-  else 
-  return nil
-  end
   cheese_types = ["cheddar", "gouda", "camembert"]
+   array.find do |type|
+    cheese_types.include?(type)
+  end 
 end
